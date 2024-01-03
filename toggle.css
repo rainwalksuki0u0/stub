@@ -1,0 +1,9 @@
+bady{
+    background-color: blue;
+}
+#box{
+    background-color: aquamarine;
+    width: 500px;
+    border: solid 2px #000;
+    padding: 20px;
+}
