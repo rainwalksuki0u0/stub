@@ -1,0 +1,233 @@
+#preloader {
+    position: fixed;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+.cn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: auto;
+    max-height: auto;
+    width: 250vh;
+    height: auto;
+    transform: translate(-4%,-25%);
+}
+.top{
+    max-width: auto;
+    max-height: 45px;
+    padding: 0%;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    z-index: 1000;
+}
+.image-button {
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+#CC {
+    width: 30px;
+    height: auto;
+}
+nav a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    display: inline-block;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+nav a:hover {
+    opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+    color: #ffffff;
+    text-decoration: none; /* 移除底線 */
+}
+.navbar-toggler {
+    background-color: #ffffff;
+   
+}
+.nav-item {
+    display: inline-block;
+    margin-left: 30px;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-link {
+    display: inline-block;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    width: 15px;
+    height: 18px;
+    margin-top: 10px;
+    margin-right: 7.5px;
+    margin-bottom: 0px;
+    margin-left: 7.5px;
+}
+.active {
+    display: flex;
+    justify-content: flex-end; /* Align the box to the right */
+    align-items: center;
+    height: 10%;
+    max-height: 10pt;
+    max-width: 100%;
+    margin-left: auto; /* Move the box to the right */
+    margin-right: 0; /* Ensure no margin on the right */
+}
+body {
+    font-family: Arial, sans-serif,arial,helvetica;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    background-color: rgb(0, 0, 0);
+    max-width: auto;
+    height: 100vh;
+    z-index: 1;
+}
+nav {
+    background-color: rgb(0, 0, 0);
+    padding: 12px;
+    text-align: center;
+}
+
+
+
+
+/**
+ * 重點0
+ * 把html跟body的高度設定為 100% 主要是為了符合視窗高度 
+ */
+ html, body {
+	height: 100%;
+}
+
+body {
+	font-family: arial,helvetica,sans-serif,微軟正黑體; 
+}
+
+/**
+ * 重點1
+ * 讓有 fix_bg 或者有 info 類別元素，最小高度100%（會因為html,body都是100%，所以會等於視窗的高度）
+ * position 設定為 relative 對應參考區塊，裡面的元素若使用 position: absolute 會根據此區塊位置顯示
+ */
+.fixed_bg, .infos {
+	position: relative;
+	height: 100%;
+}
+
+
+/**
+ * 重點2
+ * 讓所有 fix_bg 預設設定背景圖為 不重複、size為cover，固定且位置在中間。
+ * position 設定為 relative 對應參考區塊，裡面的元素若使用 position absolute 會根據此區塊位置顯示
+ */
+.fixed_bg {
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/**
+ * 重點3
+ * 若某些區塊有加入此類別，背景就會呈現指定的圖。當捲動到的時候就會呈現。
+ */
+.bg_1 {
+	background-image: url(../img/1200x630_large.jpg); 
+}
+.bg_a1 {
+	background-image: url(../img/1152x768_wmkn_0_C20230606000083.jpg); 
+}
+.bg_a2 {
+	background-image: url(../img/80fd6ec39ebd350c9b49201af0d7877a.jpg); 
+}
+.bg_b1 {
+	background-image: url(../img/0902_1360x680.jpg);
+}
+
+.color1 {
+	background-color: #E7161C;
+}
+.CS {
+    display: flex;
+    justify-content: flex-end; /* Align the box to the right */
+    align-items: center;
+    height: auto;
+    max-height: 150%;
+    max-width: 100%;
+    margin-left: 0; /* Move the box to the right */
+    margin-right: 0; /* Ensure no margin on the right */
+}
+
+.color2 {
+	background-color: #E7161C;
+}
+.CS1 {
+    padding: 0px 16px;
+}
+
+
+.vcenter {
+	position: absolute;
+	left: 50%;
+	top: 40%;
+	color: #ffffff;
+	text-align: center;
+	/*以下 transform，主要是讓此元素往左移動自己本身寬度的50%，也往上左移動自己本身高度的50%，而前方所加的-xxx-前綴詞，是for不同瀏覽器的*/
+	-webkit-transform: translateX(-50%) translateY(-50%); /* Chrome, newer versions of Opera*/
+	-moz-transform: translateX(-50%) translateY(-50%); /* Firefox */
+	-ms-transform: translateX(-50%) translateY(-50%); /* nternet Explorer */
+	-o-transform: translateX(-50%) translateY(-50%); /* Old versions of Opera */
+	transform: translateX(-50%) translateY(-50%); /* 沒限制，有支援的瀏覽器就會run */
+	text-align: center; /*裡面的文字置中*/
+}
+
+.shadow { 
+	text-shadow: 12px 12px 10px rgba(#495057); /*文字陰影效果*/ 
+}
+h1 {
+    font-size: 12pt;
+    letter-spacing: 2px; /* 調整字距為 2 像素，您可以根據需要進行調整 */
+    line-height: 1.5; /* 調整行距為文字大小的 1.5 倍，您可以根據需要進行調整 */
+}
+h2 {
+    font-size: 10pt;
+    letter-spacing: 2px; /* 調整字距為 2 像素，您可以根據需要進行調整 */
+    line-height: 1.5; /* 調整行距為文字大小的 1.5 倍，您可以根據需要進行調整 */
+	color: #ffffff;
+	text-align: center;
+}
+.bb{
+    background-color: rgba(107, 103, 103, 0.644);
+    width: 200px;
+    height: auto;
+    margin: 90px;
+    text-align: center;
+    line-height: 50%;
+    color: cornsilk;
+    font-size: 30px;
+    overflow: hidden; /* 隱藏超出容器的部分 */
+}
+.cq {
+    width: 100%; /* 圖片寬度填滿容器 */
+    height: auto; /* 圖片高度填滿容器 */
+    object-fit: cover; /* 保持圖片等比例填滿容器，可能裁剪超出的部分 */
+}

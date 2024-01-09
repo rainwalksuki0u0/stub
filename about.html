@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="">
+    <meta name="author" content="Chang-Hsin">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <!-- Latest compiled and minified CSS -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/unnamed.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/f9ff98d336.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- JS放置 </body> 結束標籤前加入以下二筆資料，一個連結JS檔，一個是設定 -->
+    <title>康士坦的變化球</title>
+    <script src="css/script.js"></script>
+</head>
+
+<header>
+    <!--選單-->
+    <div class="top">
+        <nav class="navbar navbar-expand-lg navbar-light nav-bg">
+            <button class="image-button" style="width: 50px; height: auto;" onclick="buttonClick()">
+                <a href="index.html">
+                    <img class="CC" id="CC" src="img/CC.png" alt="Button Image">
+                </a>
+            </button>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            </button>
+
+            <div class="collapsenavbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav link" href="new.html">旅程 <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav link" href="shop.html">周邊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav link" href="about.html">關於1</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="active">
+                <ul>
+                    <li class="nav-link ">
+                        <a class="nav link image-button" target="_blank"
+                            href="https://www.instagram.com/kst_officials?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav link" target="_blank" href="https://www.facebook.com/KSTbandofficial"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav link" target="_blank" href="https://twitter.com/KSTbandofficial"><i
+                                class="fa-brands fa-x-twitter"></i></a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav link" target="_blank" href="https://www.youtube.com/@kst4815"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav link" target="_blank"
+                            href="https://music.apple.com/tw/artist/%E5%BA%B7%E5%A3%AB%E5%9D%A6%E7%9A%84%E8%AE%8A%E5%8C%96%E7%90%83/1185455717"><i
+                                class="fa-brands fa-apple"></i></a>
+                    </li>
+                    <li class="nav-link">
+                        <a class="nav link" target="_blank"
+                            href="https://open.spotify.com/artist/4fmdz90I7bCk35iK6GZ9fK">
+                            <i class="fa-brands fa-spotify"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+    -->
+</header>
+<bady>
+    <div class="fixed_bg bg_a1 cg">
+        <h1 class="vcenter shadow"></h1>
+    </div>
+    <div class="infos colora1 bg_a2">
+        <h1 class="vcenter shadow">康士坦的變化球（英語：KST）， 台灣樂團。成立於2013年，團名來自希臘哲學家赫拉克利特（Heraclitus）的名言 「Change is the only
+            constant in
+            life.」「唯一不變的就是永遠在變化」，也是佛說「無常」。曲風融合後搖滾、情緒搖滾、硬核搖滾及全員主唱的元素，複雜鼓點加上吉他、貝斯音牆，VJ與合成器的編制，也以影像與音樂結合。歌曲擅長刻畫現實生活，引起廣大共鳴，被歌迷喻為「厭世樂團」代表之一。
+        </h1>
+    </div>
+    <div class="bg_a3">
+        <nav>
+            <div class="bb" data-aos="fade-right">
+                <div class="cr">
+                    <img class="cq" src="img/43703350_2228846277398940_6374411090004017152_n.jpg" alt="">
+                </div>
+                <h2>ARNY 吳穎然 主唱、吉他手</h2>
+                <a class="nav link" target="_blank"
+                    href="https://www.instagram.com/arny_arny_arny?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="bb" data-aos="fade-left">
+                <div class="cr">
+                    <img class="cq" src="img/43500067_2228846440732257_7784568412285435904_n.jpg" alt="">
+                </div>
+                <h2>Creed 趙祖毅 主唱、吉他手</h2>
+                <a class="nav link" target="_blank" href="https://www.instagram.com/creedzhao/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="bb" data-aos="fade-down-right">
+                <div class="cr">
+                    <img class="cq" src="img/43539708_2228846304065604_5224417644991479808_n.jpg" alt="">
+                </div>
+                <h2>SionC 金毛 陳佑祥 主唱、貝斯手</h2>
+                <a class="nav link" target="_blank"
+                    href="https://www.instagram.com/sionc_bassist?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="bb" data-aos="fade-up-left">
+                <div class="cr">
+                    <img class="cq" src="img/43610065_2228846194065615_4765996728719507456_n.jpg" alt="">
+                </div>
+                <h2>Gail 小米 張譯云 主唱、鼓手</h2>
+                <a class="nav link" target="_blank" href="https://www.instagram.com/iyun_drummer/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <script>
+        AOS.init(); /* AOS.init(); 是什麼都不設定也要加入的！才會有作用喔！ */
+        AOS.init({
+            // 全域設計:
+            disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+            startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
+            initClassName: 'aos-init', // class applied after initialization
+            animatedClassName: 'aos-animate', // class applied on animation
+            useClassNames: false, // if true, will add content of `data-aos` as classes on scroll
+            disableMutationObserver: false, // disables automatic mutations' detections (advanced)
+            debounceDelay: 50, // the delay on debounce used while resizing window (advanced)
+            throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
+
+
+            // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+            offset: 120, // offset (in px) from the original trigger point
+            delay: 0, // values from 0 to 3000, with step 50ms
+            duration: 1400, // values from 0 to 3000, with step 50ms
+            easing: 'ease-in-out-back', // default easing for AOS animations
+            once: false, // whether animation should happen only once - while scrolling down
+            mirror: false, // whether elements should animate out while scrolling past them
+            anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+
+        });
+    </script>
+
+
+
+
+
+</bady>
+
+</html>
